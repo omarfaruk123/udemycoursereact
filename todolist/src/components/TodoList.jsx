@@ -13,8 +13,9 @@ function TodoList() {
     }
 
 const deleteTask = (id) => {
-    const existingTask = allTask.filter((task) => task.id !== id) 
-    setAllTask(existingTask)
+    // const existingTask = allTask.filter((task) => task.id !== id) 
+    // setAllTask(existingTask)
+    setAllTask(allTask.filter((task) => task.id !== id))
 }
   return (
     <>

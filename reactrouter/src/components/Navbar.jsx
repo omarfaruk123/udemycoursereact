@@ -1,14 +1,14 @@
-import { Link } from "react-router"
+import { NavLink } from "react-router"
 
 function Navbar(){
     return (
 
         <header>
             <nav className="bg-gray-800 p-4 text-white">
-                <ul className="flex justify-center gap-6 font-medium">
-                    <li> <Link to="/" className="hover:text-blue-500"> Home </Link></li>
-                    <li> <Link to="/about" className="hover:text-blue-500"> About </Link></li>
-                    <li> <Link to="/service" className="hover:text-blue-500"> Services </Link></li>
+               <ul className="flex justify-center gap-6 font-medium">
+                    <li> <NavLink to="/" className={({isActive}) => isActive ? 'text-red-500' : 'text-white'}> Home </NavLink></li>
+                    <li> <NavLink to="/about" className={({isActive}) => isActive ? 'text-red-500' : 'text-white'}> About </NavLink></li>
+                    <li> <NavLink to="/service" className={({isActive}) => isActive ? 'text-red-500' : 'text-white'}> Services </NavLink></li>
                 </ul>
             </nav>
         </header>
